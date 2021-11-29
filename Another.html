@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<body>
+
+<canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+<script>
+var xValues = ["2011", "2012", "2013", "2014", "2015","2016","2017","2018","2019","2020"];
+var yValues = [2.616, 2.465, 2.473, 2.456, 1.802,1.796,2.064,1.917,1.878,1.445];
+var barColors = ["red", "green","blue","aqua","brown","pink","black","purple","grey","orange"];
+
+new Chart("myChart", {
+  type: "bar",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    legend: {display: false},
+    title: {
+      display: true,
+      text: "Brazil Annual GDP ranging from 2011 to 2020"
+      
+    }
+  }
+});
+</script>
+       <h1>Note: The Gdp is in multiple of trillions dollar.</h1>
+<h2>Inside above bar grapgh of Brazil GDP[2011 to 2020], we can see that the peak of GDP during the period is in 2011 with 2.616 trillion dollar.
+
+<h3>But Due to covid-19 in 2020, the gdp value during the period is the lowest one which is 1.445 trillion dollar.</h3>
+
+
+</body>
+</html>
